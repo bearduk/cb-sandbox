@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           },
           processors: [
       				require('pixrem')(), // disable if this gives issues with font mixins
-      				require('autoprefixer')({ browsers: ['last 2 versions'] }),
+      				require('autoprefixer')({ browsers: ['last 5 versions'] }),
       				require('cssnano')() // minify the result
     			]
   			},
