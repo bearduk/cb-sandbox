@@ -9,6 +9,15 @@ module.exports = function(grunt) {
 		// create link to package.json items
     	pkg: grunt.file.readJSON('package.json'),
 
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          base: './'
+          }
+        }
+    },
+
       // grunt-contrib-compass		
     	compass: {                  	// Task
     		dev: {                   	// Target
@@ -42,13 +51,26 @@ module.exports = function(grunt) {
   			dist: {
   				src:'builds/production/css/*.css'
   			}  // postcss options		    
-    	}	// postcss
+    	},	// postcss
+
+      watch: {
+        scripts: {
+        files: ['components/sass/**'],
+        tasks: ['compass', 'postcss'],
+        options: {
+          spawn: false
+          }
+        }
+      }       // end watch
 
 	}); //initConfig
 
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-postcss');
-	
-	grunt.registerTask('default', ['compass', 'postcss']);
+	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+
+
+	grunt.registerTask('default', ['connect', 'compass', 'postcss', 'watch']);
 
 }; // wrapper function
