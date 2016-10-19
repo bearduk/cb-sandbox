@@ -1,5 +1,16 @@
-// @import 'normalize';
+@import 'normalize';
+
+$blue: #272449;
+$lightblue: #3D3A5B;
+$red: #dd412c;
+$yellow: #e3c73e;
+$green: #00c281;
+
 
 .flex-container {
 	display: flex;
+	div {
+		width:90%;
+		background-color: $yellow;
+	}
 }
