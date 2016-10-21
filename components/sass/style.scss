@@ -1,16 +1,30 @@
 @import 'normalize';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $blue: #272449;
 $lightblue: #3D3A5B;
 $red: #dd412c;
 $yellow: #e3c73e;
 $green: #00c281;
+$white: #FFF;
 
+body {
+font-family: 'Open Sans', sans-serif;
+}
 
 .flex-container {
 	display: flex;
-	div {
-		width:90%;
-		background-color: $yellow;
-	}
+	flex-flow: row wrap;
+	background-color: $blue;
+	// width: 100%;
+	border: 2px solid $lightblue;
+	padding: 0px 20px 0px 20px;
+}
+.box {
+	background-color: $red;
+	border: 2px solid $yellow;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 0px 10px 10px 0px;
+    text-transform: uppercase;
 }
