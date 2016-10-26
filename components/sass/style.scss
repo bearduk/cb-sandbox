@@ -19,6 +19,8 @@ font-family: 'Open Sans', sans-serif;
 	// width: 100%;
 	border: 2px solid $lightblue;
 	padding: 0px 20px 0px 20px;
+	justify-content: space-between;
+
 }
 .box {
 	background-color: $red;
@@ -27,4 +29,5 @@ font-family: 'Open Sans', sans-serif;
 	padding: 10px;
 	margin: 0px 10px 10px 0px;
     text-transform: uppercase;
+    // max-width: 350px;
 }
